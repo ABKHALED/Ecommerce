@@ -1,0 +1,10 @@
+.rate{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.rate span{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+.aboutt .cont{
+    
+    padding: 10px;
+}
+.aboutt .cont .cont-holder{
+    padding:30px 20px ;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    transition: .5s ease-in-out;
+    border-radius: 10px;
+}
+.aboutt .cont .cont-holder div svg{
+    font-size: 40px;
+    transition: .5s ;
+}
+.aboutt .cont .cont-holder p{
+   margin: 10px 0;
+   font-weight: bold;
+   font-size: 15px;
+   transition: .5s;
+}
+.aboutt .cont .cont-holder span{
+    font-size: 14px;
+    color: var(--sec-color);
+    transition: .5s;
+}
+.aboutt .cont:hover .cont-holder{
+    background-color: var(--main-color);
+}
+.aboutt .cont:hover .cont-holder span{
+    color: white;
+}
+.aboutt .cont:hover .cont-holder svg{
+    color: white;
+}
+.aboutt .cont:hover .cont-holder p{
+    color: white;
+}

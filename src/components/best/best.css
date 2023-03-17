@@ -1,0 +1,15 @@
+.best-sellers .holder{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 20px;
+}
+.best-sellers .holder .prod{
+    height: 400px;
+}
+.best-sellers .holder .prod .top .img-holder{
+    width: 250px;
+    height: 250px;
+}
+.best-sellers .holder .prod .bottom{
+    height: 120px;
+}

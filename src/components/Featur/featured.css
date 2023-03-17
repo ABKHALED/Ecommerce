@@ -1,0 +1,12 @@
+.fea-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(280px , 1fr));
+    gap: 40px;
+}
+.fea-content .prod{
+    height: 500px;
+}
+.fea-content .prod .top .img-holder{
+    width: 250px;
+    height: 250px;
+}

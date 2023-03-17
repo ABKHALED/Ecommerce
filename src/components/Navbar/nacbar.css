@@ -1,0 +1,125 @@
+nav{
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+nav .logo h1{
+    padding: 0;
+    margin: 0;
+    transform: rotate(10deg);
+    font-weight: bold;
+    color: var(--main-color) !important;
+}
+nav .logo p{
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+nav .inks{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .inks .midel{
+    flex: 1;
+    text-align: center;
+}
+nav .inks .midel .first{
+   justify-content: center;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--sec-color);
+    font-size: 17px !important;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+
+nav ul li a:hover{
+    color: var(--main-color);
+}
+nav ul li a.active{
+    color: var(--main-color);
+}
+nav .tag{
+    display: none;
+}
+nav .tag svg{
+    font-size: 30px !important;
+    cursor: pointer;
+    color: var(--main-color);
+}
+@media screen and (max-width: 767px) {
+    nav .inks{
+        position: absolute;
+        left: -100%;
+        opacity: 0;
+        top: 70px;
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0;
+        background-color: white;
+        transition: .7s ease-in-out;
+    }
+    nav .inks.active{
+        left: 0;
+        opacity: 1;
+    }
+    nav .inks .first{
+        flex-direction: column;
+    }
+    nav .inks .right ul{
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    nav .tag{
+        display: block;
+    }
+}
+.fav{
+    position: relative;
+}
+.fav span{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}

@@ -1,0 +1,172 @@
+.store{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 100vh;
+}
+.store .header{
+    background-color: var(--section-color);
+    padding: 40px 0;
+    margin-bottom: 100px;
+}
+.store .header p{
+    font-size: 22px;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.store .left{
+    padding: 20px 10px;
+    position: relative;
+}
+.store .left aside{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 70px;
+    left: 0;
+}
+.store .left aside > div{
+    padding: 20px 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.store .left aside > div h6{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--main-color);
+}
+.store .left aside > div div{
+    margin-bottom: 10px;
+}
+.store .left aside .ran{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.store .left .cat{
+    height: 270px;
+    overflow-y: scroll;
+}
+.store .apd{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(210px , 1fr));
+    gap: 20px;
+    height: fit-content;
+    padding-top: 20px;
+}
+.store .apd .prod{
+    height: 430px;
+}
+.store .apd .prod .top .img-holder{
+    width: 200px;
+    height: 200px;
+}
+.store .apd .prod .bottom{
+    height: 140px;
+}
+.lod{
+    height: 80vh;
+    display: grid;
+    place-items: center;
+}
+.store .left .open{
+    display: none;
+    cursor: pointer;
+}
+.store .left .open svg{
+    font-size: 40px !important;
+    color: var(--main-color);
+}
+@media screen and (max-width: 768px) {
+    .store {
+        position: relative;
+    }
+    .store .left{
+        position: static;
+    }
+    .store .left aside{
+        transition: .5s ease-in-out;
+        position: fixed;
+        left: -100%;
+        top: 140px;
+        height: fit-content;
+        z-index: 3;
+        background-color: white;
+        border: 1px solid #eee;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .store .left aside.active{
+        left:0px;
+    }
+    .store .left aside .cat{
+        height: 200px;
+    }
+    .store .left aside > div{
+        border: none;
+    }
+    .store .left .open{
+        display: block;
+        position: fixed;
+        left: 20px;
+        top: 90px;
+        z-index: 3;
+        animation: blink .5s both ease-in-out infinite, move 2s   both ease-in-out infinite ;
+    }
+    @keyframes blink {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: .4;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes move {
+        0%{
+           left: 20px;
+        }
+        50%{
+           left: 20px;
+        }
+        100%{
+           left: 20px;
+        }
+    }
+    
+}
+.store .up{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background-color: var(--main-color);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ji 2s infinite backwards ease-in-out;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.store .up:hover{
+    opacity: .7;
+}
+@keyframes ji {
+    0%{
+        bottom: 50px;
+    }
+    50%{
+        bottom: 40px;
+    }
+    100%{
+        bottom: 50px;
+    }
+}

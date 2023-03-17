@@ -1,0 +1,22 @@
+.about{
+    padding-top: 100px;
+    min-height: 100vh;
+}
+.about .im-holder{
+    position: relative;
+}
+.about .im-holder img{
+    width: 100%;
+}
+.about .text-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about .text-right h3{
+    color: var(--main-color);
+    margin-bottom: 40px;
+}
+.about .text-right p{
+    color: var(--sec-color);
+}

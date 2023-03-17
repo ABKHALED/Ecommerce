@@ -1,0 +1,63 @@
+.hero{
+    height: 100vh;
+    background-image: url(../../assets/jeune-femme-pull-peche-decontracte-isole-mur-couleur-vert-olive-cri-dans-megaphone-tenant-sacs-provisions-annonce-remises-promotion-vente.jpg);
+    background-size: cover;
+    background-position:  center;
+    background-repeat: no-repeat;
+}
+.hero .container{
+    height: 100% ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 70px;
+}
+.hero .container .contant h1{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.hero .container .contant h1 span{
+    color: var(--main-color);
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.hero .container .contant .ls{
+    margin-top: 20px !important;
+}
+.hero .container .contant a{
+    width: fit-content;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 40px;
+    background-color: var(--section-color);
+    border-radius: 10px;
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+.hero .container .contant a:hover{
+    background-color: var(--main-color);
+    color: var(--section-color);
+}
+@media screen and (max-width : 500px) {
+    .hero .container{
+        justify-content: center;
+    }
+    .hero .container .contant{
+        text-align: center;
+    }
+    .hero .container .contant h1{
+        font-size: 30px !important;
+    }
+    .hero .container .contant h1 span{
+        font-size: 30px !important;
+    }
+    .hero .container .contant a{
+        font-size: 16px;
+        margin: 20px auto 0;
+    }
+}

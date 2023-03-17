@@ -1,0 +1,113 @@
+.prod{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.prod .top{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--section-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prod .top .img-holder{
+    position: relative;
+    border-radius: 100%;
+}
+.prod .top .img-holder img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    object-position: center center;
+    border-radius: 100%;
+}
+.prod .top .icons{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    transform: translateX(-50%);
+    background: rgba(113,205,20,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    transition: .5s ease-in-out;
+    opacity: 0;
+}
+.prod .top .icons a,
+.prod .top .icons div{
+    text-decoration: none;
+    color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: .5s;
+}
+.prod .top .icons a:hover,
+.prod .top .icons div:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+@media screen and (max-width:767px) {
+    .prod .top .icons{
+        bottom: 0 !important;
+       opacity: 1;
+    }
+}
+.prod .top .icons a svg{
+    font-size: 18px !important;
+}
+.prod .top .icons div svg{
+    font-size: 18px !important;
+}
+.prod:hover  .top .icons{
+    bottom: 0;
+    opacity: 1;
+}
+.icons .cart.active{
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+.icons .love.active{
+    background-color: var(--main-color) !important;
+    color: red !important;
+}
+.prod .bottom{
+    height: 100px;
+    padding: 20px;
+}
+.prod .bottom p{
+    margin: 0 0 10px;
+    transition: .5s;
+}
+.prod:hover .bottom p{
+    color: var(--main-color);
+}
+.prod .bottom .price{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.prod .bottom .price h4{
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.prod .bottom .price span{
+    align-self: flex-end;
+    color: var(--sec-color);
+    text-decoration: line-through;
+}
